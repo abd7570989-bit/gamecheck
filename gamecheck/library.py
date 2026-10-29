@@ -28,7 +28,7 @@ SETTINGS_FILENAME = "settings.json"
 # own public repository (see docs/UPDATING_LIBRARY.md) before building the EXE; users
 # can also override it in settings.json. Empty means the update button explains that no
 # update source is configured.
-DEFAULT_LIBRARY_URL = ""
+DEFAULT_LIBRARY_URL = "https://raw.githubusercontent.com/abd7570989-bit/gamecheck/main/gamecheck/data/library.json"
 
 
 class LibraryError(ValueError):
