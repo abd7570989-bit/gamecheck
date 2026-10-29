@@ -195,9 +195,9 @@ function renderSpecs(data) {
   const gpuSub = recog(r.gpu_model, r.gpu_detected, r.gpu_manual);
   if (r.gpu_laptop) gpuSub.append(" · لابتوب");
   item("كرت الشاشة", ltr(r.gpu_name || "؟"), gpuSub);
-  item("ذاكرة الفيديو", r.gpu_integrated ? "مشتركة (كرت مدمج)" : num(r.vram_gb) + " GB");
-  item("الذاكرة RAM", num(r.ram_gb) + " GB");
-  item("أكبر مساحة حرة", num(r.free_disk_gb) + " GB");
+  item("ذاكرة الفيديو", r.gpu_integrated ? "مشتركة (كرت مدمج)" : ltr(num(r.vram_gb) + " GB"));
+  item("الذاكرة RAM", ltr(num(r.ram_gb) + " GB"));
+  item("أكبر مساحة حرة", ltr(num(r.free_disk_gb) + " GB"));
   item("نظام التشغيل", ltr(r.os && r.os.name || "؟"),
        r.os && r.os.is_64bit === false ? el("div", { class: "flag" }, "نظام 32-بت") : null);
   if (s.gpus.length > 1) item("كروت شاشة أخرى", ltr(s.gpus.map(g => g.name).filter(n => n !== r.gpu_name).join("، ")));
