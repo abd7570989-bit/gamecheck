@@ -1,0 +1,349 @@
+<!doctype html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>GameCheck</title>
+<style>
+  :root {
+    --bg: #f5f6f8; --card: #ffffff; --text: #1d2330; --muted: #5f6878; --line: #e2e5ea;
+    --accent: #2f5bd3; --accent-text: #ffffff;
+    --ok: #1d7a46; --ok-bg: #e3f4ea; --min: #1f6a8a; --min-bg: #e2f1f7;
+    --warn: #8a5a00; --warn-bg: #fdf0d5; --bad: #b42828; --bad-bg: #fbe4e4; --unk: #555e6e; --unk-bg: #eceef2;
+  }
+  @media (prefers-color-scheme: dark) {
+    :root {
+      --bg: #14171d; --card: #1d2129; --text: #e7eaf0; --muted: #a0a8b8; --line: #2e3440;
+      --accent: #5b82ec; --accent-text: #0d1016;
+      --ok: #6fd39a; --ok-bg: #18382a; --min: #7cc6e6; --min-bg: #173341;
+      --warn: #f2c46b; --warn-bg: #3d3018; --bad: #f08a8a; --bad-bg: #432020; --unk: #b4bccb; --unk-bg: #2a2f39;
+    }
+  }
+  * { box-sizing: border-box; }
+  body { margin: 0; background: var(--bg); color: var(--text);
+         font: 15px/1.6 "Segoe UI", Tahoma, "Noto Sans Arabic", Arial, sans-serif; }
+  .wrap { max-width: 1100px; margin: 0 auto; padding: 20px 16px 40px; }
+  header { display: flex; flex-wrap: wrap; gap: 12px; align-items: center; justify-content: space-between; margin-bottom: 18px; }
+  h1 { margin: 0; font-size: 24px; }
+  .tagline { margin: 2px 0 0; color: var(--muted); font-size: 14px; }
+  .actions { display: flex; gap: 8px; flex-wrap: wrap; }
+  button { font: inherit; border: 1px solid var(--line); background: var(--card); color: var(--text);
+           padding: 7px 14px; border-radius: 8px; cursor: pointer; }
+  button:hover { border-color: var(--accent); }
+  button.primary { background: var(--accent); border-color: var(--accent); color: var(--accent-text); }
+  button:disabled { opacity: .6; cursor: progress; }
+  .card { background: var(--card); border: 1px solid var(--line); border-radius: 12px; padding: 16px; margin-bottom: 16px; }
+  h2 { margin: 0 0 12px; font-size: 17px; }
+  .specs { display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 10px 18px; }
+  .spec .k { color: var(--muted); font-size: 13px; }
+  .spec .v { font-weight: 600; overflow-wrap: anywhere; }
+  .spec .sub { font-size: 13px; color: var(--muted); }
+  .flag { color: var(--warn); font-size: 13px; }
+  .ltr { direction: ltr; unicode-bidi: isolate; }
+  .override { display: none; margin-top: 14px; padding-top: 14px; border-top: 1px dashed var(--line); }
+  .override.open { display: block; }
+  .override label { display: block; margin-bottom: 10px; font-size: 14px; }
+  .override input { width: 100%; max-width: 420px; display: block; margin-top: 4px; font: inherit; padding: 6px 10px;
+                    border: 1px solid var(--line); border-radius: 8px; background: var(--bg); color: var(--text); direction: ltr; }
+  .linkbtn { background: none; border: none; color: var(--accent); padding: 0; text-decoration: underline; }
+  .toolbar { display: flex; flex-wrap: wrap; gap: 10px; align-items: center; margin-bottom: 12px; }
+  .toolbar input { flex: 1 1 220px; font: inherit; padding: 8px 12px; border: 1px solid var(--line);
+                   border-radius: 8px; background: var(--card); color: var(--text); }
+  .chips { display: flex; flex-wrap: wrap; gap: 6px; }
+  .chip { padding: 4px 12px; border-radius: 999px; font-size: 13px; }
+  .chip[aria-pressed="true"] { background: var(--accent); border-color: var(--accent); color: var(--accent-text); }
+  .games { display: grid; grid-template-columns: repeat(auto-fill, minmax(250px, 1fr)); gap: 10px; }
+  .game { text-align: start; display: flex; flex-direction: column; gap: 6px; padding: 12px; border-radius: 10px; }
+  .game .name { font-weight: 600; }
+  .badge { white-space: nowrap; display: inline-block; padding: 2px 10px; border-radius: 999px; font-size: 13px; font-weight: 600; }
+  .s-recommended { color: var(--ok); background: var(--ok-bg); }
+  .s-minimum { color: var(--min); background: var(--min-bg); }
+  .s-borderline { color: var(--warn); background: var(--warn-bg); }
+  .s-below { color: var(--bad); background: var(--bad-bg); }
+  .s-unknown { color: var(--unk); background: var(--unk-bg); }
+  .disk-warn { font-size: 13px; color: var(--warn); }
+  dialog { border: 1px solid var(--line); border-radius: 12px; background: var(--card); color: var(--text);
+           width: min(860px, calc(100vw - 32px)); padding: 0; }
+  dialog::backdrop { background: rgba(0,0,0,.45); }
+  .dlg-head { display: flex; justify-content: space-between; align-items: center; gap: 10px; padding: 14px 16px; border-bottom: 1px solid var(--line); }
+  .dlg-head h3 { margin: 0; font-size: 18px; }
+  .dlg-body { padding: 14px 16px 18px; }
+  .table-wrap { overflow-x: auto; }
+  table { width: 100%; border-collapse: collapse; font-size: 14px; }
+  th, td { text-align: start; padding: 8px; border-bottom: 1px solid var(--line); vertical-align: top; }
+  th { color: var(--muted); font-weight: 600; font-size: 13px; }
+  td .note { display: block; color: var(--muted); font-size: 12.5px; }
+  .muted { color: var(--muted); font-size: 13px; }
+  .status-line { margin-top: 8px; font-size: 14px; min-height: 1.4em; }
+  footer { color: var(--muted); font-size: 13px; text-align: center; margin-top: 20px; }
+  .empty { color: var(--muted); padding: 10px 0; }
+  .closed { text-align: center; padding: 80px 16px; }
+</style>
+</head>
+<body>
+<div class="wrap" id="app">
+  <header>
+    <div>
+      <h1>GameCheck</h1>
+      <p class="tagline">هل تعمل اللعبة على جهازك؟ مجاني بالكامل، ويعمل دون إنترنت، ولا يجمع أي بيانات.</p>
+    </div>
+    <div class="actions">
+      <button id="rescan">إعادة فحص الجهاز</button>
+      <button id="update" class="primary">تحديث مكتبة الألعاب</button>
+      <button id="quit">خروج</button>
+    </div>
+  </header>
+
+  <section class="card" aria-labelledby="sys-title">
+    <h2 id="sys-title">مواصفات جهازك</h2>
+    <div class="specs" id="specs"><div class="empty">جارٍ فحص الجهاز…</div></div>
+    <p class="muted" style="margin:12px 0 0">
+      النتيجة غير صحيحة أو لم نتعرف على قطعة؟ <button class="linkbtn" id="toggle-override">اختر المعالج أو كرت الشاشة يدويًا</button>
+    </p>
+    <div class="override" id="override">
+      <label>المعالج
+        <input id="cpu-pick" list="cpu-list" placeholder="اتركه فارغًا للاكتشاف التلقائي" autocomplete="off">
+      </label>
+      <label>كرت الشاشة
+        <input id="gpu-pick" list="gpu-list" placeholder="اتركه فارغًا للاكتشاف التلقائي" autocomplete="off">
+      </label>
+      <datalist id="cpu-list"></datalist><datalist id="gpu-list"></datalist>
+      <button id="save-override" class="primary">حفظ</button>
+      <button id="clear-override">العودة للاكتشاف التلقائي</button>
+      <div class="status-line" id="override-status"></div>
+    </div>
+  </section>
+
+  <section class="card" aria-labelledby="games-title">
+    <h2 id="games-title">الألعاب</h2>
+    <div class="toolbar">
+      <input id="search" type="search" placeholder="ابحث عن لعبة…" aria-label="ابحث عن لعبة">
+      <div class="chips" id="chips" role="group" aria-label="تصفية حسب النتيجة"></div>
+    </div>
+    <div class="games" id="games"><div class="empty">جارٍ المقارنة…</div></div>
+    <div class="status-line" id="update-status" role="status"></div>
+  </section>
+
+  <footer id="footer"></footer>
+</div>
+
+<dialog id="details" aria-labelledby="d-title">
+  <div class="dlg-head"><h3 id="d-title"></h3><button id="d-close" aria-label="إغلاق">إغلاق</button></div>
+  <div class="dlg-body" id="d-body"></div>
+</dialog>
+
+<script>
+"use strict";
+const TOKEN = "__GAMECHECK_TOKEN__";
+const VERSION = "__GAMECHECK_VERSION__";
+
+const VERDICT = {
+  recommended: "يعمل بالإعدادات الموصى بها",
+  minimum: "يعمل بالحد الأدنى",
+  borderline: "قد يعمل بإعدادات منخفضة",
+  unknown: "غير مؤكد",
+  below: "أقل من الحد الأدنى",
+};
+const STATUS = {
+  recommended: "✓ يحقق الموصى به", minimum: "✓ يحقق الحد الأدنى", borderline: "≈ قريب من الحد الأدنى",
+  below: "✗ أقل من المطلوب", unknown: "؟ غير معروف",
+};
+const LABEL = {
+  cpu: "المعالج", gpu: "كرت الشاشة", vram: "ذاكرة الفيديو (GB)", ram: "الذاكرة RAM (GB)",
+  storage: "المساحة الحرة (GB)", os: "نظام التشغيل",
+};
+const NOTE = {
+  cpu_unrecognised: "لم نتعرف على طراز المعالج",
+  gpu_unrecognised: "لم نتعرف على كرت الشاشة؛ اختره يدويًا لنتيجة دقيقة",
+  laptop_gpu: "كرت شاشة لابتوب: يُقدَّر أداؤه بنحو 80% من نسخة الحاسب المكتبي",
+  ssd_required: "يتطلب قرص SSD",
+  ssd_recommended: "يُفضَّل قرص SSD",
+};
+const FILTERS = [["all", "الكل"], ["works", "يعمل"], ["borderline", "قد يعمل"], ["below", "لا يعمل"], ["unknown", "غير مؤكد"]];
+
+let results = [];
+let filter = "all";
+
+async function api(path, options = {}) {
+  const res = await fetch(path, { ...options, headers: { "X-GameCheck-Token": TOKEN, "Content-Type": "application/json" } });
+  if (!res.ok) throw new Error("HTTP " + res.status);
+  return res.json();
+}
+
+function el(tag, attrs = {}, ...children) {
+  const node = document.createElement(tag);
+  for (const [k, v] of Object.entries(attrs)) {
+    if (k === "class") node.className = v; else if (k.startsWith("on")) node.addEventListener(k.slice(2), v); else node.setAttribute(k, v);
+  }
+  for (const c of children) if (c !== null && c !== undefined) node.append(c.nodeType ? c : String(c));
+  return node;
+}
+const ltr = (text) => el("span", { class: "ltr", dir: "ltr" }, text);
+const num = (v) => v === null || v === undefined ? "؟" : (Number.isInteger(v) ? String(v) : v.toFixed(1));
+
+function renderSpecs(data) {
+  const s = data.system, r = data.resolved;
+  const specs = document.getElementById("specs");
+  specs.replaceChildren();
+  const item = (k, v, sub) => specs.append(el("div", { class: "spec" }, el("div", { class: "k" }, k), el("div", { class: "v" }, v), sub || null));
+  const recog = (model, raw, manual) => manual
+    ? el("div", { class: "sub" }, "اخترته يدويًا (المكتشف: ", ltr(raw || "؟"), ")")
+    : model
+      ? el("div", { class: "sub" }, "تم التعرف عليه: ", ltr(model))
+      : el("div", { class: "flag" }, raw ? "لم نتعرف على هذا الطراز" : "لم يُكتشف");
+  item("المعالج", ltr(r.cpu_manual ? r.cpu_model : (r.cpu_name || "؟")), recog(r.cpu_model, r.cpu_name, r.cpu_manual));
+  const gpuSub = recog(r.gpu_model, r.gpu_detected, r.gpu_manual);
+  if (r.gpu_laptop) gpuSub.append(" · لابتوب");
+  item("كرت الشاشة", ltr(r.gpu_name || "؟"), gpuSub);
+  item("ذاكرة الفيديو", r.gpu_integrated ? "مشتركة (كرت مدمج)" : num(r.vram_gb) + " GB");
+  item("الذاكرة RAM", num(r.ram_gb) + " GB");
+  item("أكبر مساحة حرة", num(r.free_disk_gb) + " GB");
+  item("نظام التشغيل", ltr(r.os && r.os.name || "؟"),
+       r.os && r.os.is_64bit === false ? el("div", { class: "flag" }, "نظام 32-بت") : null);
+  if (s.gpus.length > 1) item("كروت شاشة أخرى", ltr(s.gpus.map(g => g.name).filter(n => n !== r.gpu_name).join("، ")));
+}
+
+function bucket(overall) {
+  if (overall === "recommended" || overall === "minimum") return "works";
+  return overall;
+}
+
+function renderChips() {
+  const chips = document.getElementById("chips");
+  chips.replaceChildren(...FILTERS.map(([key, label]) => {
+    const count = key === "all" ? results.length : results.filter(r => bucket(r.overall) === key).length;
+    return el("button", { class: "chip", "aria-pressed": String(filter === key), onclick: () => { filter = key; renderGames(); } },
+              `${label} (${count})`);
+  }));
+}
+
+function renderGames() {
+  renderChips();
+  const q = document.getElementById("search").value.trim().toLowerCase();
+  const list = results.filter(r => (filter === "all" || bucket(r.overall) === filter) && r.name.toLowerCase().includes(q));
+  const box = document.getElementById("games");
+  if (!list.length) { box.replaceChildren(el("div", { class: "empty" }, "لا توجد ألعاب مطابقة.")); return; }
+  box.replaceChildren(...list.map(r => el("button", { class: "game", onclick: () => openDetails(r.id) },
+    el("span", { class: "name ltr", dir: "ltr" }, r.name),
+    el("span", {}, el("span", { class: "badge s-" + r.overall }, VERDICT[r.overall])),
+    r.needs_disk_space ? el("span", { class: "disk-warn" }, "تحتاج مساحة حرة إضافية لتثبيتها") : null)));
+}
+
+function reqCell(value) {
+  if (value === null || value === undefined) return "—";
+  if (Array.isArray(value)) return value.length ? el("span", {}, ...value.flatMap((v, i) => i ? [el("br"), ltr(v)] : [ltr(v)])) : "—";
+  return typeof value === "number" ? num(value) : ltr(value);
+}
+
+function openDetails(id) {
+  const r = results.find(x => x.id === id);
+  document.getElementById("d-title").replaceChildren(ltr(r.name));
+  const rows = r.components.map(c => el("tr", {},
+    el("td", {}, LABEL[c.key]),
+    el("td", {}, typeof c.yours === "number" ? num(c.yours) : ltr(c.yours || "؟"), c.note ? el("span", { class: "note" }, NOTE[c.note]) : null),
+    el("td", {}, reqCell(c.minimum)),
+    el("td", {}, reqCell(c.recommended)),
+    el("td", {}, el("span", { class: "badge s-" + c.status }, STATUS[c.status]))));
+  const body = document.getElementById("d-body");
+  body.replaceChildren(...[
+    el("p", { style: "margin-top:0" }, "النتيجة: ", el("span", { class: "badge s-" + r.overall }, VERDICT[r.overall])),
+    r.weakest.length ? el("p", {}, "نقاط الضعف: ", r.weakest.map(k => LABEL[k]).join("، ")) : null,
+    r.needs_disk_space ? el("p", { class: "disk-warn" }, "المساحة الحرة غير كافية لتثبيت اللعبة. لا يؤثر ذلك على قدرة جهازك على تشغيلها بعد توفير المساحة.") : null,
+    el("div", { class: "table-wrap" }, el("table", {},
+      el("thead", {}, el("tr", {}, ...["المكوّن", "جهازك", "الحد الأدنى", "الموصى به", "النتيجة"].map(h => el("th", {}, h)))),
+      el("tbody", {}, ...rows))),
+    !r.has_recommended ? el("p", { class: "muted" }, "لا تنشر هذه اللعبة متطلبات موصى بها، لذا نقارن بالحد الأدنى فقط.") : null,
+    el("p", { class: "muted" }, "عند ذكر أكثر من قطعة، يكفي أن يعادل جهازك أيًّا منها. تقييم أداء المعالجات وكروت الشاشة تقديري ومبني على متوسطات اختبارات أداء عامة."),
+    r.source ? el("p", { class: "muted" }, "مصدر المتطلبات: ", ltr(r.source)) : null].filter(Boolean));
+  document.getElementById("details").showModal();
+}
+
+function renderFooter(lib) {
+  const src = lib.source === "downloaded" ? "محدَّثة من الإنترنت ومحفوظة على جهازك" : "المكتبة المضمَّنة في البرنامج";
+  document.getElementById("footer").textContent =
+    `GameCheck ${VERSION} · مكتبة الألعاب: الإصدار ${lib.library_version} (${src}) · ${lib.games} لعبة · آخر تحديث ${lib.updated || "؟"}`;
+}
+
+async function loadAll(refresh = false) {
+  const sys = await api("/api/system" + (refresh ? "?refresh=1" : ""));
+  renderSpecs(sys);
+  const res = await api("/api/results");
+  results = res.results;
+  renderGames();
+  renderFooter(res.library);
+}
+
+async function loadHardwareLists() {
+  const hw = await api("/api/hardware");
+  document.getElementById("cpu-list").replaceChildren(...hw.cpus.map(n => el("option", { value: n })));
+  document.getElementById("gpu-list").replaceChildren(...hw.gpus.map(n => el("option", { value: n })));
+  document.getElementById("cpu-pick").value = hw.settings.cpu_override || "";
+  document.getElementById("gpu-pick").value = hw.settings.gpu_override || "";
+  return hw;
+}
+
+async function withBusy(button, fn) {
+  button.disabled = true;
+  try { await fn(); } finally { button.disabled = false; }
+}
+
+document.getElementById("rescan").addEventListener("click", (e) => withBusy(e.target, () => loadAll(true)));
+
+document.getElementById("update").addEventListener("click", (e) => withBusy(e.target, async () => {
+  const line = document.getElementById("update-status");
+  line.textContent = "جارٍ البحث عن تحديث…";
+  try {
+    const r = await api("/api/update-library", { method: "POST", body: "{}" });
+    const messages = {
+      updated: `تم تحديث المكتبة إلى الإصدار ${r.library_version} (${r.games} لعبة). ستبقى متاحة دون إنترنت.`,
+      up_to_date: "مكتبة الألعاب محدَّثة بالفعل.",
+      offline: "تعذّر الاتصال بالإنترنت. ستستمر باستخدام المكتبة المحفوظة على جهازك.",
+      invalid: "الملف الذي تم تنزيله غير صالح، لذلك لم يتغيّر شيء.",
+      not_configured: "لم يُضبط مصدر لتحديث المكتبة في هذه النسخة. المكتبة المضمَّنة تعمل بشكل طبيعي.",
+    };
+    line.textContent = messages[r.status] || r.status;
+    if (r.status === "updated") await loadAll();
+    else renderFooter(r.library);
+  } catch (err) {
+    line.textContent = "حدث خطأ أثناء التحديث. لم يتغيّر شيء.";
+  }
+}));
+
+document.getElementById("toggle-override").addEventListener("click", async () => {
+  const panel = document.getElementById("override");
+  panel.classList.toggle("open");
+  if (panel.classList.contains("open")) await loadHardwareLists();
+});
+
+async function saveOverride(cpu, gpu) {
+  const status = document.getElementById("override-status");
+  const hw = await api("/api/hardware");
+  if (cpu && !hw.cpus.includes(cpu)) { status.textContent = "اختر المعالج من القائمة المقترحة."; return; }
+  if (gpu && !hw.gpus.includes(gpu)) { status.textContent = "اختر كرت الشاشة من القائمة المقترحة."; return; }
+  await api("/api/overrides", { method: "POST", body: JSON.stringify({ cpu_override: cpu, gpu_override: gpu }) });
+  status.textContent = (cpu || gpu) ? "تم الحفظ. أُعيدت المقارنة باختيارك." : "عُدنا إلى الاكتشاف التلقائي.";
+  await loadAll();
+}
+
+document.getElementById("save-override").addEventListener("click", (e) => withBusy(e.target, () =>
+  saveOverride(document.getElementById("cpu-pick").value.trim(), document.getElementById("gpu-pick").value.trim())));
+document.getElementById("clear-override").addEventListener("click", (e) => withBusy(e.target, async () => {
+  document.getElementById("cpu-pick").value = ""; document.getElementById("gpu-pick").value = "";
+  await saveOverride("", "");
+}));
+
+document.getElementById("search").addEventListener("input", renderGames);
+document.getElementById("d-close").addEventListener("click", () => document.getElementById("details").close());
+
+document.getElementById("quit").addEventListener("click", async () => {
+  try { await api("/api/shutdown", { method: "POST", body: "{}" }); } catch (e) { /* already closed */ }
+  document.getElementById("app").replaceChildren(el("div", { class: "closed" },
+    el("h2", {}, "تم إغلاق GameCheck"), el("p", { class: "muted" }, "يمكنك إغلاق هذه الصفحة الآن.")));
+});
+
+loadAll().catch(() => {
+  document.getElementById("games").replaceChildren(el("div", { class: "empty" }, "تعذّر الاتصال بالبرنامج. تأكد من أن نافذة GameCheck ما زالت مفتوحة."));
+});
+</script>
+</body>
+</html>

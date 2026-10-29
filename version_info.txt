@@ -1,0 +1,15 @@
+# Windows file properties shown in Explorer (Properties > Details).
+VSVersionInfo(
+  ffi=FixedFileInfo(filevers=(1, 0, 0, 0), prodvers=(1, 0, 0, 0)),
+  kids=[
+    StringFileInfo([StringTable('040904B0', [
+      StringStruct('ProductName', 'GameCheck'),
+      StringStruct('FileDescription', 'GameCheck - free offline game compatibility checker'),
+      StringStruct('FileVersion', '1.0.0'),
+      StringStruct('ProductVersion', '1.0.0'),
+      StringStruct('OriginalFilename', 'GameCheck.exe'),
+      StringStruct('LegalCopyright', 'Free software'),
+    ])]),
+    VarFileInfo([VarStruct('Translation', [1033, 1200])])
+  ]
+)

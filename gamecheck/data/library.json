@@ -1,0 +1,1794 @@
+{
+ "schema_version": 1,
+ "library_version": 1,
+ "updated": "2026-10-29",
+ "cpus": [
+  {
+   "name": "Intel Core 2 Duo E8400",
+   "score": 35
+  },
+  {
+   "name": "Intel Core 2 Quad Q6600",
+   "score": 40
+  },
+  {
+   "name": "Intel Core 2 Quad Q9550",
+   "score": 50
+  },
+  {
+   "name": "AMD Phenom 9850",
+   "score": 35
+  },
+  {
+   "name": "AMD Phenom II X4 940",
+   "score": 45
+  },
+  {
+   "name": "AMD Phenom II X4 965",
+   "score": 50
+  },
+  {
+   "name": "Intel Core i5-750",
+   "score": 52
+  },
+  {
+   "name": "Intel Core i7-920",
+   "score": 60
+  },
+  {
+   "name": "Intel Core i3-2100",
+   "score": 50
+  },
+  {
+   "name": "Intel Core i5-2400",
+   "score": 75
+  },
+  {
+   "name": "Intel Core i5-2500K",
+   "score": 82
+  },
+  {
+   "name": "Intel Core i7-2600K",
+   "score": 95
+  },
+  {
+   "name": "Intel Core i3-3210",
+   "score": 52
+  },
+  {
+   "name": "Intel Core i3-3225",
+   "score": 55
+  },
+  {
+   "name": "Intel Core i5-3470",
+   "score": 87
+  },
+  {
+   "name": "Intel Core i5-3570K",
+   "score": 92
+  },
+  {
+   "name": "Intel Core i7-3770",
+   "score": 105
+  },
+  {
+   "name": "Intel Core i7-3770K",
+   "score": 108
+  },
+  {
+   "name": "Intel Core i3-4150",
+   "score": 62
+  },
+  {
+   "name": "Intel Core i5-4430",
+   "score": 92
+  },
+  {
+   "name": "Intel Core i5-4460",
+   "score": 100
+  },
+  {
+   "name": "Intel Core i5-4590",
+   "score": 104
+  },
+  {
+   "name": "Intel Core i5-4670K",
+   "score": 106
+  },
+  {
+   "name": "Intel Core i5-4690",
+   "score": 107
+  },
+  {
+   "name": "Intel Core i5-4690K",
+   "score": 108
+  },
+  {
+   "name": "Intel Core i7-4770",
+   "score": 120
+  },
+  {
+   "name": "Intel Core i7-4770K",
+   "score": 123
+  },
+  {
+   "name": "Intel Core i7-4790",
+   "score": 128
+  },
+  {
+   "name": "Intel Core i7-4790K",
+   "score": 132
+  },
+  {
+   "name": "Intel Core i3-6100",
+   "score": 75
+  },
+  {
+   "name": "Intel Core i3-6300",
+   "score": 80
+  },
+  {
+   "name": "Intel Core i5-6400",
+   "score": 105
+  },
+  {
+   "name": "Intel Core i5-6500",
+   "score": 110
+  },
+  {
+   "name": "Intel Core i5-6600",
+   "score": 116
+  },
+  {
+   "name": "Intel Core i5-6600K",
+   "score": 120
+  },
+  {
+   "name": "Intel Core i7-6700",
+   "score": 138
+  },
+  {
+   "name": "Intel Core i7-6700K",
+   "score": 145
+  },
+  {
+   "name": "Intel Core i5-7300U",
+   "score": 70
+  },
+  {
+   "name": "Intel Core i5-7400",
+   "score": 115
+  },
+  {
+   "name": "Intel Core i5-7600K",
+   "score": 128
+  },
+  {
+   "name": "Intel Core i7-7700",
+   "score": 150
+  },
+  {
+   "name": "Intel Core i7-7700K",
+   "score": 155
+  },
+  {
+   "name": "Intel Core i3-8100",
+   "score": 110
+  },
+  {
+   "name": "Intel Core i5-8250U",
+   "score": 85
+  },
+  {
+   "name": "Intel Core i5-8400",
+   "score": 150
+  },
+  {
+   "name": "Intel Core i5-8600K",
+   "score": 165
+  },
+  {
+   "name": "Intel Core i7-8700",
+   "score": 180
+  },
+  {
+   "name": "Intel Core i7-8700K",
+   "score": 188
+  },
+  {
+   "name": "Intel Core i5-9400",
+   "score": 155
+  },
+  {
+   "name": "Intel Core i5-9600K",
+   "score": 172
+  },
+  {
+   "name": "Intel Core i7-9700",
+   "score": 195
+  },
+  {
+   "name": "Intel Core i7-9700K",
+   "score": 205
+  },
+  {
+   "name": "Intel Core i9-9900K",
+   "score": 225
+  },
+  {
+   "name": "Intel Core i3-10100",
+   "score": 130
+  },
+  {
+   "name": "Intel Core i5-10210U",
+   "score": 90
+  },
+  {
+   "name": "Intel Core i5-10400",
+   "score": 175
+  },
+  {
+   "name": "Intel Core i5-10600K",
+   "score": 200
+  },
+  {
+   "name": "Intel Core i7-10700",
+   "score": 225
+  },
+  {
+   "name": "Intel Core i7-10700K",
+   "score": 235
+  },
+  {
+   "name": "Intel Core i7-10750H",
+   "score": 165
+  },
+  {
+   "name": "Intel Core i9-10900K",
+   "score": 255
+  },
+  {
+   "name": "Intel Core i5-1135G7",
+   "score": 115
+  },
+  {
+   "name": "Intel Core i5-11400",
+   "score": 200
+  },
+  {
+   "name": "Intel Core i5-11400H",
+   "score": 190
+  },
+  {
+   "name": "Intel Core i7-11700K",
+   "score": 250
+  },
+  {
+   "name": "Intel Core i3-12100",
+   "score": 185
+  },
+  {
+   "name": "Intel Core i5-12400",
+   "score": 235
+  },
+  {
+   "name": "Intel Core i5-12600K",
+   "score": 285
+  },
+  {
+   "name": "Intel Core i7-12700",
+   "score": 310
+  },
+  {
+   "name": "Intel Core i7-12700H",
+   "score": 260
+  },
+  {
+   "name": "Intel Core i7-12700K",
+   "score": 325
+  },
+  {
+   "name": "Intel Core i9-12900K",
+   "score": 355
+  },
+  {
+   "name": "Intel Core i5-13400",
+   "score": 260
+  },
+  {
+   "name": "Intel Core i5-13600K",
+   "score": 340
+  },
+  {
+   "name": "Intel Core i7-13700K",
+   "score": 390
+  },
+  {
+   "name": "Intel Core i9-13900K",
+   "score": 430
+  },
+  {
+   "name": "Intel Core i5-14400",
+   "score": 270
+  },
+  {
+   "name": "Intel Core i5-14600K",
+   "score": 350
+  },
+  {
+   "name": "Intel Core i7-14700K",
+   "score": 410
+  },
+  {
+   "name": "Intel Core i9-14900K",
+   "score": 440
+  },
+  {
+   "name": "Intel Core Ultra 5 125H",
+   "score": 230
+  },
+  {
+   "name": "Intel Core Ultra 7 155H",
+   "score": 270
+  },
+  {
+   "name": "Intel Core Ultra 5 245K",
+   "score": 330
+  },
+  {
+   "name": "Intel Core Ultra 7 265K",
+   "score": 400
+  },
+  {
+   "name": "Intel Core Ultra 9 285K",
+   "score": 440
+  },
+  {
+   "name": "AMD FX-4300",
+   "score": 55
+  },
+  {
+   "name": "AMD FX-4350",
+   "score": 58
+  },
+  {
+   "name": "AMD FX-6300",
+   "score": 75
+  },
+  {
+   "name": "AMD FX-8320",
+   "score": 85
+  },
+  {
+   "name": "AMD FX-8350",
+   "score": 92
+  },
+  {
+   "name": "AMD A8-7600",
+   "score": 50
+  },
+  {
+   "name": "AMD A10-7800",
+   "score": 55
+  },
+  {
+   "name": "AMD Athlon 200GE",
+   "score": 60
+  },
+  {
+   "name": "AMD Ryzen 3 1200",
+   "score": 95
+  },
+  {
+   "name": "AMD Ryzen 3 1300X",
+   "score": 105
+  },
+  {
+   "name": "AMD Ryzen 5 1400",
+   "score": 110
+  },
+  {
+   "name": "AMD Ryzen 5 1500X",
+   "score": 125
+  },
+  {
+   "name": "AMD Ryzen 5 1600",
+   "score": 140
+  },
+  {
+   "name": "AMD Ryzen 5 1600X",
+   "score": 145
+  },
+  {
+   "name": "AMD Ryzen 7 1700",
+   "score": 155
+  },
+  {
+   "name": "AMD Ryzen 7 1800X",
+   "score": 165
+  },
+  {
+   "name": "AMD Ryzen 3 2200G",
+   "score": 105
+  },
+  {
+   "name": "AMD Ryzen 5 2400G",
+   "score": 125
+  },
+  {
+   "name": "AMD Ryzen 5 2600",
+   "score": 155
+  },
+  {
+   "name": "AMD Ryzen 5 2600X",
+   "score": 162
+  },
+  {
+   "name": "AMD Ryzen 7 2700X",
+   "score": 180
+  },
+  {
+   "name": "AMD Ryzen 3 3100",
+   "score": 140
+  },
+  {
+   "name": "AMD Ryzen 3 3200G",
+   "score": 115
+  },
+  {
+   "name": "AMD Ryzen 3 3300U",
+   "score": 70
+  },
+  {
+   "name": "AMD Ryzen 3 3300X",
+   "score": 165
+  },
+  {
+   "name": "AMD Ryzen 5 3400G",
+   "score": 135
+  },
+  {
+   "name": "AMD Ryzen 5 3500U",
+   "score": 85
+  },
+  {
+   "name": "AMD Ryzen 5 3600",
+   "score": 190
+  },
+  {
+   "name": "AMD Ryzen 5 3600X",
+   "score": 198
+  },
+  {
+   "name": "AMD Ryzen 7 3700X",
+   "score": 215
+  },
+  {
+   "name": "AMD Ryzen 7 3800X",
+   "score": 222
+  },
+  {
+   "name": "AMD Ryzen 9 3900X",
+   "score": 245
+  },
+  {
+   "name": "AMD Ryzen 5 4500",
+   "score": 190
+  },
+  {
+   "name": "AMD Ryzen 5 4600H",
+   "score": 165
+  },
+  {
+   "name": "AMD Ryzen 5 5500",
+   "score": 210
+  },
+  {
+   "name": "AMD Ryzen 5 5600",
+   "score": 245
+  },
+  {
+   "name": "AMD Ryzen 5 5600G",
+   "score": 230
+  },
+  {
+   "name": "AMD Ryzen 5 5600H",
+   "score": 215
+  },
+  {
+   "name": "AMD Ryzen 5 5600X",
+   "score": 252
+  },
+  {
+   "name": "AMD Ryzen 7 5700X",
+   "score": 270
+  },
+  {
+   "name": "AMD Ryzen 7 5800H",
+   "score": 245
+  },
+  {
+   "name": "AMD Ryzen 7 5800X",
+   "score": 285
+  },
+  {
+   "name": "AMD Ryzen 7 5800X3D",
+   "score": 320
+  },
+  {
+   "name": "AMD Ryzen 9 5900X",
+   "score": 305
+  },
+  {
+   "name": "AMD Ryzen 9 5950X",
+   "score": 320
+  },
+  {
+   "name": "AMD Ryzen 7 6800H",
+   "score": 270
+  },
+  {
+   "name": "AMD Ryzen 5 7600",
+   "score": 300
+  },
+  {
+   "name": "AMD Ryzen 5 7600X",
+   "score": 310
+  },
+  {
+   "name": "AMD Ryzen 7 7700X",
+   "score": 340
+  },
+  {
+   "name": "AMD Ryzen 7 7800X3D",
+   "score": 400
+  },
+  {
+   "name": "AMD Ryzen 9 7950X",
+   "score": 400
+  },
+  {
+   "name": "AMD Ryzen 5 9600X",
+   "score": 335
+  },
+  {
+   "name": "AMD Ryzen 7 9700X",
+   "score": 370
+  },
+  {
+   "name": "AMD Ryzen 7 9800X3D",
+   "score": 450
+  }
+ ],
+ "gpus": [
+  {
+   "name": "NVIDIA GeForce 9800 GT",
+   "score": 10,
+   "vram_gb": 1
+  },
+  {
+   "name": "NVIDIA GeForce GT 640",
+   "score": 10,
+   "vram_gb": 2
+  },
+  {
+   "name": "NVIDIA GeForce GT 730",
+   "score": 8,
+   "vram_gb": 2
+  },
+  {
+   "name": "NVIDIA GeForce GT 1030",
+   "score": 22,
+   "vram_gb": 2
+  },
+  {
+   "name": "NVIDIA GeForce GTX 650",
+   "score": 18,
+   "vram_gb": 1
+  },
+  {
+   "name": "NVIDIA GeForce GTX 650 Ti",
+   "score": 25,
+   "vram_gb": 1
+  },
+  {
+   "name": "NVIDIA GeForce GTX 660",
+   "score": 40,
+   "vram_gb": 2
+  },
+  {
+   "name": "NVIDIA GeForce GTX 660 Ti",
+   "score": 48,
+   "vram_gb": 2
+  },
+  {
+   "name": "NVIDIA GeForce GTX 670",
+   "score": 55,
+   "vram_gb": 2
+  },
+  {
+   "name": "NVIDIA GeForce GTX 680",
+   "score": 60,
+   "vram_gb": 2
+  },
+  {
+   "name": "NVIDIA GeForce GTX 750",
+   "score": 30,
+   "vram_gb": 1
+  },
+  {
+   "name": "NVIDIA GeForce GTX 750 Ti",
+   "score": 35,
+   "vram_gb": 2
+  },
+  {
+   "name": "NVIDIA GeForce GTX 760",
+   "score": 50,
+   "vram_gb": 2
+  },
+  {
+   "name": "NVIDIA GeForce GTX 770",
+   "score": 62,
+   "vram_gb": 2
+  },
+  {
+   "name": "NVIDIA GeForce GTX 780",
+   "score": 70,
+   "vram_gb": 3
+  },
+  {
+   "name": "NVIDIA GeForce GTX 780 Ti",
+   "score": 80,
+   "vram_gb": 3
+  },
+  {
+   "name": "NVIDIA GeForce GTX 950",
+   "score": 45,
+   "vram_gb": 2
+  },
+  {
+   "name": "NVIDIA GeForce GTX 960",
+   "score": 55,
+   "vram_gb": 2
+  },
+  {
+   "name": "NVIDIA GeForce GTX 970",
+   "score": 85,
+   "vram_gb": 4
+  },
+  {
+   "name": "NVIDIA GeForce GTX 980",
+   "score": 102,
+   "vram_gb": 4
+  },
+  {
+   "name": "NVIDIA GeForce GTX 980 Ti",
+   "score": 130,
+   "vram_gb": 6
+  },
+  {
+   "name": "NVIDIA GeForce GTX 1050",
+   "score": 47,
+   "vram_gb": 2
+  },
+  {
+   "name": "NVIDIA GeForce GTX 1050 Ti",
+   "score": 58,
+   "vram_gb": 4
+  },
+  {
+   "name": "NVIDIA GeForce GTX 1060 3GB",
+   "score": 92,
+   "vram_gb": 3
+  },
+  {
+   "name": "NVIDIA GeForce GTX 1060 6GB",
+   "score": 100,
+   "vram_gb": 6,
+   "keys": [
+    "NVIDIA GeForce GTX 1060 6GB",
+    "NVIDIA GeForce GTX 1060"
+   ]
+  },
+  {
+   "name": "NVIDIA GeForce GTX 1070",
+   "score": 135,
+   "vram_gb": 8
+  },
+  {
+   "name": "NVIDIA GeForce GTX 1070 Ti",
+   "score": 150,
+   "vram_gb": 8
+  },
+  {
+   "name": "NVIDIA GeForce GTX 1080",
+   "score": 165,
+   "vram_gb": 8
+  },
+  {
+   "name": "NVIDIA GeForce GTX 1080 Ti",
+   "score": 210,
+   "vram_gb": 11
+  },
+  {
+   "name": "NVIDIA GeForce GTX 1630",
+   "score": 40,
+   "vram_gb": 4
+  },
+  {
+   "name": "NVIDIA GeForce GTX 1650",
+   "score": 72,
+   "vram_gb": 4
+  },
+  {
+   "name": "NVIDIA GeForce GTX 1650 SUPER",
+   "score": 95,
+   "vram_gb": 4
+  },
+  {
+   "name": "NVIDIA GeForce GTX 1660",
+   "score": 115,
+   "vram_gb": 6
+  },
+  {
+   "name": "NVIDIA GeForce GTX 1660 SUPER",
+   "score": 128,
+   "vram_gb": 6
+  },
+  {
+   "name": "NVIDIA GeForce GTX 1660 Ti",
+   "score": 130,
+   "vram_gb": 6
+  },
+  {
+   "name": "NVIDIA GeForce RTX 2060",
+   "score": 150,
+   "vram_gb": 6
+  },
+  {
+   "name": "NVIDIA GeForce RTX 2060 SUPER",
+   "score": 170,
+   "vram_gb": 8
+  },
+  {
+   "name": "NVIDIA GeForce RTX 2070",
+   "score": 180,
+   "vram_gb": 8
+  },
+  {
+   "name": "NVIDIA GeForce RTX 2070 SUPER",
+   "score": 200,
+   "vram_gb": 8
+  },
+  {
+   "name": "NVIDIA GeForce RTX 2080",
+   "score": 215,
+   "vram_gb": 8
+  },
+  {
+   "name": "NVIDIA GeForce RTX 2080 SUPER",
+   "score": 225,
+   "vram_gb": 8
+  },
+  {
+   "name": "NVIDIA GeForce RTX 2080 Ti",
+   "score": 270,
+   "vram_gb": 11
+  },
+  {
+   "name": "NVIDIA GeForce RTX 3050",
+   "score": 125,
+   "vram_gb": 8
+  },
+  {
+   "name": "NVIDIA GeForce RTX 3060",
+   "score": 175,
+   "vram_gb": 12
+  },
+  {
+   "name": "NVIDIA GeForce RTX 3060 Ti",
+   "score": 225,
+   "vram_gb": 8
+  },
+  {
+   "name": "NVIDIA GeForce RTX 3070",
+   "score": 255,
+   "vram_gb": 8
+  },
+  {
+   "name": "NVIDIA GeForce RTX 3070 Ti",
+   "score": 270,
+   "vram_gb": 8
+  },
+  {
+   "name": "NVIDIA GeForce RTX 3080",
+   "score": 330,
+   "vram_gb": 10
+  },
+  {
+   "name": "NVIDIA GeForce RTX 3080 Ti",
+   "score": 365,
+   "vram_gb": 12
+  },
+  {
+   "name": "NVIDIA GeForce RTX 3090",
+   "score": 375,
+   "vram_gb": 24
+  },
+  {
+   "name": "NVIDIA GeForce RTX 3090 Ti",
+   "score": 400,
+   "vram_gb": 24
+  },
+  {
+   "name": "NVIDIA GeForce RTX 4060",
+   "score": 210,
+   "vram_gb": 8
+  },
+  {
+   "name": "NVIDIA GeForce RTX 4060 Ti",
+   "score": 250,
+   "vram_gb": 8
+  },
+  {
+   "name": "NVIDIA GeForce RTX 4070",
+   "score": 325,
+   "vram_gb": 12
+  },
+  {
+   "name": "NVIDIA GeForce RTX 4070 SUPER",
+   "score": 375,
+   "vram_gb": 12
+  },
+  {
+   "name": "NVIDIA GeForce RTX 4070 Ti",
+   "score": 400,
+   "vram_gb": 12
+  },
+  {
+   "name": "NVIDIA GeForce RTX 4070 Ti SUPER",
+   "score": 425,
+   "vram_gb": 16
+  },
+  {
+   "name": "NVIDIA GeForce RTX 4080",
+   "score": 490,
+   "vram_gb": 16
+  },
+  {
+   "name": "NVIDIA GeForce RTX 4080 SUPER",
+   "score": 500,
+   "vram_gb": 16
+  },
+  {
+   "name": "NVIDIA GeForce RTX 4090",
+   "score": 640,
+   "vram_gb": 24
+  },
+  {
+   "name": "NVIDIA GeForce RTX 5060",
+   "score": 250,
+   "vram_gb": 8
+  },
+  {
+   "name": "NVIDIA GeForce RTX 5060 Ti",
+   "score": 290,
+   "vram_gb": 8
+  },
+  {
+   "name": "NVIDIA GeForce RTX 5070",
+   "score": 390,
+   "vram_gb": 12
+  },
+  {
+   "name": "NVIDIA GeForce RTX 5070 Ti",
+   "score": 480,
+   "vram_gb": 16
+  },
+  {
+   "name": "NVIDIA GeForce RTX 5080",
+   "score": 550,
+   "vram_gb": 16
+  },
+  {
+   "name": "NVIDIA GeForce RTX 5090",
+   "score": 780,
+   "vram_gb": 32
+  },
+  {
+   "name": "AMD Radeon HD 4870",
+   "score": 14,
+   "vram_gb": 1
+  },
+  {
+   "name": "AMD Radeon HD 5770",
+   "score": 18,
+   "vram_gb": 1
+  },
+  {
+   "name": "AMD Radeon HD 7770",
+   "score": 27,
+   "vram_gb": 1
+  },
+  {
+   "name": "AMD Radeon HD 7850",
+   "score": 40,
+   "vram_gb": 2,
+   "keys": [
+    "AMD Radeon HD 7850",
+    "AMD Radeon HD 7800 Series"
+   ]
+  },
+  {
+   "name": "AMD Radeon HD 7870",
+   "score": 47,
+   "vram_gb": 2
+  },
+  {
+   "name": "AMD Radeon HD 7950",
+   "score": 58,
+   "vram_gb": 3,
+   "keys": [
+    "AMD Radeon HD 7950",
+    "AMD Radeon HD 7900 Series"
+   ]
+  },
+  {
+   "name": "AMD Radeon HD 7970",
+   "score": 65,
+   "vram_gb": 3
+  },
+  {
+   "name": "AMD Radeon R5 200 Series",
+   "score": 5,
+   "vram_gb": 1,
+   "keys": [
+    "AMD Radeon R5 200 Series",
+    "Radeon R5 230",
+    "Radeon R5 235"
+   ]
+  },
+  {
+   "name": "AMD Radeon R7 240",
+   "score": 8,
+   "vram_gb": 2
+  },
+  {
+   "name": "AMD Radeon R7 250",
+   "score": 13,
+   "vram_gb": 1
+  },
+  {
+   "name": "AMD Radeon R7 260X",
+   "score": 30,
+   "vram_gb": 2
+  },
+  {
+   "name": "AMD Radeon R7 370",
+   "score": 45,
+   "vram_gb": 2
+  },
+  {
+   "name": "AMD Radeon R9 270",
+   "score": 45,
+   "vram_gb": 2
+  },
+  {
+   "name": "AMD Radeon R9 270X",
+   "score": 50,
+   "vram_gb": 2
+  },
+  {
+   "name": "AMD Radeon R9 280",
+   "score": 58,
+   "vram_gb": 3
+  },
+  {
+   "name": "AMD Radeon R9 280X",
+   "score": 65,
+   "vram_gb": 3
+  },
+  {
+   "name": "AMD Radeon R9 285",
+   "score": 62,
+   "vram_gb": 2
+  },
+  {
+   "name": "AMD Radeon R9 290",
+   "score": 85,
+   "vram_gb": 4
+  },
+  {
+   "name": "AMD Radeon R9 290X",
+   "score": 92,
+   "vram_gb": 4
+  },
+  {
+   "name": "AMD Radeon R9 380",
+   "score": 62,
+   "vram_gb": 4
+  },
+  {
+   "name": "AMD Radeon R9 390",
+   "score": 95,
+   "vram_gb": 8
+  },
+  {
+   "name": "AMD Radeon R9 Fury",
+   "score": 115,
+   "vram_gb": 4
+  },
+  {
+   "name": "AMD Radeon RX 460",
+   "score": 40,
+   "vram_gb": 2
+  },
+  {
+   "name": "AMD Radeon RX 470",
+   "score": 85,
+   "vram_gb": 4
+  },
+  {
+   "name": "AMD Radeon RX 480",
+   "score": 95,
+   "vram_gb": 4
+  },
+  {
+   "name": "AMD Radeon RX 550",
+   "score": 25,
+   "vram_gb": 2
+  },
+  {
+   "name": "AMD Radeon RX 560",
+   "score": 42,
+   "vram_gb": 4
+  },
+  {
+   "name": "AMD Radeon RX 570",
+   "score": 88,
+   "vram_gb": 4
+  },
+  {
+   "name": "AMD Radeon RX 580",
+   "score": 98,
+   "vram_gb": 8
+  },
+  {
+   "name": "AMD Radeon RX 590",
+   "score": 108,
+   "vram_gb": 8
+  },
+  {
+   "name": "AMD Radeon RX Vega 56",
+   "score": 140,
+   "vram_gb": 8
+  },
+  {
+   "name": "AMD Radeon RX Vega 64",
+   "score": 155,
+   "vram_gb": 8
+  },
+  {
+   "name": "AMD Radeon RX 5500 XT",
+   "score": 105,
+   "vram_gb": 4
+  },
+  {
+   "name": "AMD Radeon RX 5600 XT",
+   "score": 150,
+   "vram_gb": 6
+  },
+  {
+   "name": "AMD Radeon RX 5700",
+   "score": 165,
+   "vram_gb": 8
+  },
+  {
+   "name": "AMD Radeon RX 5700 XT",
+   "score": 185,
+   "vram_gb": 8
+  },
+  {
+   "name": "AMD Radeon RX 6400",
+   "score": 60,
+   "vram_gb": 4
+  },
+  {
+   "name": "AMD Radeon RX 6500 XT",
+   "score": 75,
+   "vram_gb": 4
+  },
+  {
+   "name": "AMD Radeon RX 6600",
+   "score": 175,
+   "vram_gb": 8
+  },
+  {
+   "name": "AMD Radeon RX 6600 XT",
+   "score": 200,
+   "vram_gb": 8
+  },
+  {
+   "name": "AMD Radeon RX 6650 XT",
+   "score": 210,
+   "vram_gb": 8
+  },
+  {
+   "name": "AMD Radeon RX 6700 XT",
+   "score": 250,
+   "vram_gb": 12
+  },
+  {
+   "name": "AMD Radeon RX 6750 XT",
+   "score": 265,
+   "vram_gb": 12
+  },
+  {
+   "name": "AMD Radeon RX 6800",
+   "score": 310,
+   "vram_gb": 16
+  },
+  {
+   "name": "AMD Radeon RX 6800 XT",
+   "score": 360,
+   "vram_gb": 16
+  },
+  {
+   "name": "AMD Radeon RX 6900 XT",
+   "score": 385,
+   "vram_gb": 16
+  },
+  {
+   "name": "AMD Radeon RX 6950 XT",
+   "score": 410,
+   "vram_gb": 16
+  },
+  {
+   "name": "AMD Radeon RX 7600",
+   "score": 210,
+   "vram_gb": 8
+  },
+  {
+   "name": "AMD Radeon RX 7600 XT",
+   "score": 220,
+   "vram_gb": 16
+  },
+  {
+   "name": "AMD Radeon RX 7700 XT",
+   "score": 300,
+   "vram_gb": 12
+  },
+  {
+   "name": "AMD Radeon RX 7800 XT",
+   "score": 360,
+   "vram_gb": 16
+  },
+  {
+   "name": "AMD Radeon RX 7900 GRE",
+   "score": 400,
+   "vram_gb": 16
+  },
+  {
+   "name": "AMD Radeon RX 7900 XT",
+   "score": 470,
+   "vram_gb": 20
+  },
+  {
+   "name": "AMD Radeon RX 7900 XTX",
+   "score": 530,
+   "vram_gb": 24
+  },
+  {
+   "name": "AMD Radeon RX 9060 XT",
+   "score": 290,
+   "vram_gb": 16
+  },
+  {
+   "name": "AMD Radeon RX 9070",
+   "score": 430,
+   "vram_gb": 16
+  },
+  {
+   "name": "AMD Radeon RX 9070 XT",
+   "score": 480,
+   "vram_gb": 16
+  },
+  {
+   "name": "AMD Radeon Vega 8 Graphics",
+   "score": 22,
+   "integrated": true,
+   "keys": [
+    "AMD Radeon Vega 8 Graphics",
+    "Radeon Vega 8"
+   ]
+  },
+  {
+   "name": "AMD Radeon 780M",
+   "score": 60,
+   "integrated": true
+  },
+  {
+   "name": "Intel HD Graphics 4000",
+   "score": 5,
+   "integrated": true,
+   "keys": [
+    "Intel HD Graphics 4000",
+    "Intel HD 4000"
+   ]
+  },
+  {
+   "name": "Intel HD Graphics 530",
+   "score": 8,
+   "integrated": true
+  },
+  {
+   "name": "Intel HD Graphics 620",
+   "score": 9,
+   "integrated": true
+  },
+  {
+   "name": "Intel UHD Graphics 620",
+   "score": 9,
+   "integrated": true
+  },
+  {
+   "name": "Intel UHD Graphics 630",
+   "score": 10,
+   "integrated": true
+  },
+  {
+   "name": "Intel UHD Graphics 730",
+   "score": 12,
+   "integrated": true
+  },
+  {
+   "name": "Intel UHD Graphics 770",
+   "score": 12,
+   "integrated": true
+  },
+  {
+   "name": "Intel Iris Xe Graphics",
+   "score": 25,
+   "integrated": true,
+   "keys": [
+    "Intel Iris Xe Graphics",
+    "Intel Iris Xe"
+   ]
+  },
+  {
+   "name": "Intel Arc A380",
+   "score": 75,
+   "vram_gb": 6
+  },
+  {
+   "name": "Intel Arc A580",
+   "score": 175,
+   "vram_gb": 8
+  },
+  {
+   "name": "Intel Arc A750",
+   "score": 200,
+   "vram_gb": 8
+  },
+  {
+   "name": "Intel Arc A770",
+   "score": 215,
+   "vram_gb": 16
+  },
+  {
+   "name": "Intel Arc B580",
+   "score": 250,
+   "vram_gb": 12
+  }
+ ],
+ "games": [
+  {
+   "id": "cyberpunk-2077",
+   "name": "Cyberpunk 2077",
+   "source": "https://store.steampowered.com/app/1091500/",
+   "minimum": {
+    "cpu": [
+     "Intel Core i7-6700",
+     "AMD Ryzen 5 1600"
+    ],
+    "gpu": [
+     "NVIDIA GeForce GTX 1060 6GB",
+     "AMD Radeon RX 580",
+     "Intel Arc A380"
+    ],
+    "ram_gb": 12,
+    "storage_gb": 70,
+    "os": {
+     "windows": 10
+    },
+    "vram_gb": 6,
+    "ssd": true
+   },
+   "recommended": {
+    "cpu": [
+     "Intel Core i7-12700",
+     "AMD Ryzen 7 7800X3D"
+    ],
+    "gpu": [
+     "NVIDIA GeForce RTX 2060 SUPER",
+     "AMD Radeon RX 5700 XT",
+     "Intel Arc A770"
+    ],
+    "ram_gb": 16,
+    "storage_gb": 70,
+    "os": {
+     "windows": 10
+    },
+    "vram_gb": 8,
+    "ssd": true
+   }
+  },
+  {
+   "id": "elden-ring",
+   "name": "Elden Ring",
+   "source": "https://store.steampowered.com/app/1245620/",
+   "minimum": {
+    "cpu": [
+     "Intel Core i5-8400",
+     "AMD Ryzen 3 3300X"
+    ],
+    "gpu": [
+     "NVIDIA GeForce GTX 1060 3GB",
+     "AMD Radeon RX 580"
+    ],
+    "ram_gb": 12,
+    "storage_gb": 60,
+    "os": {
+     "windows": 10
+    },
+    "vram_gb": 3
+   },
+   "recommended": {
+    "cpu": [
+     "Intel Core i7-8700K",
+     "AMD Ryzen 5 3600X"
+    ],
+    "gpu": [
+     "NVIDIA GeForce GTX 1070",
+     "AMD Radeon RX Vega 56"
+    ],
+    "ram_gb": 16,
+    "storage_gb": 60,
+    "os": {
+     "windows": 10
+    },
+    "vram_gb": 8
+   }
+  },
+  {
+   "id": "red-dead-redemption-2",
+   "name": "Red Dead Redemption 2",
+   "source": "https://store.steampowered.com/app/1174180/",
+   "minimum": {
+    "cpu": [
+     "Intel Core i5-2500K",
+     "AMD FX-6300"
+    ],
+    "gpu": [
+     "NVIDIA GeForce GTX 770",
+     "AMD Radeon R9 280"
+    ],
+    "ram_gb": 8,
+    "storage_gb": 150,
+    "os": {
+     "windows": 10
+    },
+    "vram_gb": 2
+   },
+   "recommended": {
+    "cpu": [
+     "Intel Core i7-4770K",
+     "AMD Ryzen 5 1500X"
+    ],
+    "gpu": [
+     "NVIDIA GeForce GTX 1060 6GB",
+     "AMD Radeon RX 480"
+    ],
+    "ram_gb": 12,
+    "storage_gb": 150,
+    "os": {
+     "windows": 10
+    },
+    "vram_gb": 4
+   }
+  },
+  {
+   "id": "gta-v",
+   "name": "Grand Theft Auto V",
+   "source": "https://store.steampowered.com/app/271590/",
+   "minimum": {
+    "cpu": [
+     "Intel Core 2 Quad Q6600",
+     "AMD Phenom 9850"
+    ],
+    "gpu": [
+     "NVIDIA GeForce 9800 GT",
+     "AMD Radeon HD 4870"
+    ],
+    "ram_gb": 4,
+    "storage_gb": 110,
+    "os": {
+     "windows": 10
+    },
+    "vram_gb": 1
+   },
+   "recommended": {
+    "cpu": [
+     "Intel Core i5-3470",
+     "AMD FX-8350"
+    ],
+    "gpu": [
+     "NVIDIA GeForce GTX 660",
+     "AMD Radeon HD 7870"
+    ],
+    "ram_gb": 8,
+    "storage_gb": 110,
+    "os": {
+     "windows": 10
+    },
+    "vram_gb": 2
+   }
+  },
+  {
+   "id": "baldurs-gate-3",
+   "name": "Baldur's Gate 3",
+   "source": "https://store.steampowered.com/app/1086940/",
+   "minimum": {
+    "cpu": [
+     "Intel Core i5-4690",
+     "AMD FX-8350"
+    ],
+    "gpu": [
+     "NVIDIA GeForce GTX 970",
+     "AMD Radeon RX 480"
+    ],
+    "ram_gb": 8,
+    "storage_gb": 150,
+    "os": {
+     "windows": 10
+    },
+    "vram_gb": 4,
+    "ssd": true
+   },
+   "recommended": {
+    "cpu": [
+     "Intel Core i7-8700K",
+     "AMD Ryzen 5 3600"
+    ],
+    "gpu": [
+     "NVIDIA GeForce RTX 2060 SUPER",
+     "AMD Radeon RX 5700 XT"
+    ],
+    "ram_gb": 16,
+    "storage_gb": 150,
+    "os": {
+     "windows": 10
+    },
+    "vram_gb": 8,
+    "ssd": true
+   }
+  },
+  {
+   "id": "hogwarts-legacy",
+   "name": "Hogwarts Legacy",
+   "source": "https://store.steampowered.com/app/990080/",
+   "minimum": {
+    "cpu": [
+     "Intel Core i5-6600",
+     "AMD Ryzen 5 1400"
+    ],
+    "gpu": [
+     "NVIDIA GeForce GTX 960",
+     "AMD Radeon RX 470",
+     "Intel Arc A380"
+    ],
+    "ram_gb": 16,
+    "storage_gb": 85,
+    "os": {
+     "windows": 10
+    },
+    "vram_gb": 4,
+    "ssd": true
+   },
+   "recommended": {
+    "cpu": [
+     "Intel Core i7-8700",
+     "AMD Ryzen 5 3600"
+    ],
+    "gpu": [
+     "NVIDIA GeForce GTX 1080 Ti",
+     "AMD Radeon RX 5700 XT",
+     "Intel Arc A770"
+    ],
+    "ram_gb": 16,
+    "storage_gb": 85,
+    "os": {
+     "windows": 10
+    },
+    "vram_gb": 8,
+    "ssd": true
+   }
+  },
+  {
+   "id": "black-myth-wukong",
+   "name": "Black Myth: Wukong",
+   "source": "https://store.steampowered.com/app/2358720/",
+   "minimum": {
+    "cpu": [
+     "Intel Core i5-8400",
+     "AMD Ryzen 5 1600"
+    ],
+    "gpu": [
+     "NVIDIA GeForce GTX 1060 6GB",
+     "AMD Radeon RX 580"
+    ],
+    "ram_gb": 16,
+    "storage_gb": 130,
+    "os": {
+     "windows": 10
+    },
+    "vram_gb": 6,
+    "ssd": true
+   },
+   "recommended": {
+    "cpu": [
+     "Intel Core i7-9700",
+     "AMD Ryzen 5 5500"
+    ],
+    "gpu": [
+     "NVIDIA GeForce RTX 2060",
+     "AMD Radeon RX 5700 XT",
+     "Intel Arc A750"
+    ],
+    "ram_gb": 16,
+    "storage_gb": 130,
+    "os": {
+     "windows": 10
+    },
+    "vram_gb": 6,
+    "ssd": true
+   }
+  },
+  {
+   "id": "forza-horizon-5",
+   "name": "Forza Horizon 5",
+   "source": "https://store.steampowered.com/app/1551360/",
+   "minimum": {
+    "cpu": [
+     "Intel Core i5-4460",
+     "AMD Ryzen 3 1200"
+    ],
+    "gpu": [
+     "NVIDIA GeForce GTX 970",
+     "AMD Radeon RX 470"
+    ],
+    "ram_gb": 8,
+    "storage_gb": 110,
+    "os": {
+     "windows": 10
+    },
+    "vram_gb": 4
+   },
+   "recommended": {
+    "cpu": [
+     "Intel Core i5-8400",
+     "AMD Ryzen 5 1500X"
+    ],
+    "gpu": [
+     "NVIDIA GeForce GTX 1070",
+     "AMD Radeon RX 590"
+    ],
+    "ram_gb": 16,
+    "storage_gb": 110,
+    "os": {
+     "windows": 10
+    },
+    "vram_gb": 8
+   }
+  },
+  {
+   "id": "the-witcher-3",
+   "name": "The Witcher 3: Wild Hunt (Next-Gen)",
+   "source": "https://store.steampowered.com/app/292030/",
+   "minimum": {
+    "cpu": [
+     "Intel Core i5-2500K",
+     "AMD Phenom II X4 940"
+    ],
+    "gpu": [
+     "NVIDIA GeForce GTX 770",
+     "AMD Radeon R9 290"
+    ],
+    "ram_gb": 8,
+    "storage_gb": 50,
+    "os": {
+     "windows": 10
+    },
+    "vram_gb": 2
+   },
+   "recommended": {
+    "cpu": [
+     "Intel Core i7-6700K",
+     "AMD Ryzen 5 1600"
+    ],
+    "gpu": [
+     "NVIDIA GeForce GTX 1070",
+     "AMD Radeon RX 480"
+    ],
+    "ram_gb": 12,
+    "storage_gb": 50,
+    "os": {
+     "windows": 10
+    },
+    "vram_gb": 4
+   }
+  },
+  {
+   "id": "pubg",
+   "name": "PUBG: Battlegrounds",
+   "source": "https://store.steampowered.com/app/578080/",
+   "minimum": {
+    "cpu": [
+     "Intel Core i5-4430",
+     "AMD FX-6300"
+    ],
+    "gpu": [
+     "NVIDIA GeForce GTX 960",
+     "AMD Radeon R7 370"
+    ],
+    "ram_gb": 8,
+    "storage_gb": 40,
+    "os": {
+     "windows": 10
+    },
+    "vram_gb": 2
+   },
+   "recommended": {
+    "cpu": [
+     "Intel Core i5-6600K",
+     "AMD Ryzen 5 1600"
+    ],
+    "gpu": [
+     "NVIDIA GeForce GTX 1060 3GB",
+     "AMD Radeon RX 580"
+    ],
+    "ram_gb": 16,
+    "storage_gb": 50,
+    "os": {
+     "windows": 10
+    },
+    "vram_gb": 3
+   }
+  },
+  {
+   "id": "apex-legends",
+   "name": "Apex Legends",
+   "source": "https://store.steampowered.com/app/1172470/",
+   "minimum": {
+    "cpu": [
+     "Intel Core i3-6300",
+     "AMD FX-4350"
+    ],
+    "gpu": [
+     "NVIDIA GeForce GT 640",
+     "AMD Radeon HD 7770"
+    ],
+    "ram_gb": 6,
+    "storage_gb": 75,
+    "os": {
+     "windows": 10
+    },
+    "vram_gb": 1
+   },
+   "recommended": {
+    "cpu": [
+     "Intel Core i5-3570K"
+    ],
+    "gpu": [
+     "NVIDIA GeForce GTX 970",
+     "AMD Radeon R9 290"
+    ],
+    "ram_gb": 8,
+    "storage_gb": 75,
+    "os": {
+     "windows": 10
+    },
+    "vram_gb": 4
+   }
+  },
+  {
+   "id": "counter-strike-2",
+   "name": "Counter-Strike 2",
+   "source": "https://store.steampowered.com/app/730/",
+   "minimum": {
+    "cpu": [
+     "Intel Core i5-750"
+    ],
+    "gpu": [],
+    "ram_gb": 8,
+    "storage_gb": 85,
+    "os": {
+     "windows": 10
+    },
+    "vram_gb": 1
+   }
+  },
+  {
+   "id": "valorant",
+   "name": "VALORANT",
+   "source": "https://playvalorant.com/",
+   "minimum": {
+    "cpu": [
+     "Intel Core 2 Duo E8400",
+     "AMD Athlon 200GE"
+    ],
+    "gpu": [
+     "Intel HD Graphics 4000",
+     "AMD Radeon R5 200 Series"
+    ],
+    "ram_gb": 4,
+    "storage_gb": 30,
+    "os": {
+     "windows": 10
+    },
+    "vram_gb": 1
+   },
+   "recommended": {
+    "cpu": [
+     "Intel Core i3-4150",
+     "AMD Ryzen 3 1200"
+    ],
+    "gpu": [
+     "NVIDIA GeForce GT 730",
+     "AMD Radeon R7 240"
+    ],
+    "ram_gb": 4,
+    "storage_gb": 30,
+    "os": {
+     "windows": 10
+    },
+    "vram_gb": 1
+   }
+  },
+  {
+   "id": "fortnite",
+   "name": "Fortnite",
+   "source": "https://www.fortnite.com/technical-specifications",
+   "minimum": {
+    "cpu": [
+     "Intel Core i3-3225"
+    ],
+    "gpu": [
+     "Intel HD Graphics 4000",
+     "AMD Radeon Vega 8 Graphics"
+    ],
+    "ram_gb": 8,
+    "storage_gb": 30,
+    "os": {
+     "windows": 10
+    }
+   },
+   "recommended": {
+    "cpu": [
+     "Intel Core i5-7300U",
+     "AMD Ryzen 3 3300U"
+    ],
+    "gpu": [
+     "NVIDIA GeForce GTX 960",
+     "AMD Radeon R9 280"
+    ],
+    "ram_gb": 16,
+    "storage_gb": 30,
+    "os": {
+     "windows": 10
+    },
+    "vram_gb": 2
+   }
+  }
+ ]
+}
