@@ -38,7 +38,8 @@ async function startApp() {
   const external = [];
   const errors = [];
   try {
-    const page = await browser.newPage({ viewport: { width: 1280, height: 900 } });
+    // bypassCSP lets Playwright run its own checks; the app's CSP itself is covered by test_server.py.
+    const page = await browser.newPage({ viewport: { width: 1280, height: 900 }, bypassCSP: true });
     page.on("pageerror", (e) => errors.push(String(e)));
     page.on("console", (m) => { if (m.type() === "error") errors.push(m.text()); });
     await page.route("**/*", (route) => {
