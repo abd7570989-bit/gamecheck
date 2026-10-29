@@ -4,3 +4,4 @@ build/
 dist/
 .pytest_cache/
 node_modules/
+GameCheck-source.zip
