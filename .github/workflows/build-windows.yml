@@ -41,11 +41,21 @@ jobs:
       - name: Test the EXE
         shell: pwsh
         run: |
-          ./dist/GameCheck.exe --version
-          ./dist/GameCheck.exe --report
-          if ($LASTEXITCODE -ne 0) { exit 1 }
-          node tests/ui/ui_test.js ./dist/GameCheck.exe
-          if ($LASTEXITCODE -ne 0) { exit 1 }
+          # On failure, the output is also attached as an annotation so it is visible
+          # on the run summary page without opening the full log.
+          function Check($label, [scriptblock]$cmd) {
+            $out = & $cmd 2>&1 | Out-String
+            $code = $LASTEXITCODE
+            Write-Host $out
+            if ($code -ne 0) {
+              $tail = ($out -split "`n" | Select-Object -Last 40) -join "%0A"
+              Write-Host "::error title=$label failed (exit $code)::$tail"
+              exit 1
+            }
+          }
+          Check "GameCheck --version" { ./dist/GameCheck.exe --version }
+          Check "GameCheck --report" { ./dist/GameCheck.exe --report }
+          Check "UI test against EXE" { node tests/ui/ui_test.js ./dist/GameCheck.exe }
 
       - name: Checksum
         shell: pwsh
