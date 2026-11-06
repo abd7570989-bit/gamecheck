@@ -73,21 +73,7 @@ jobs:
         run: ./scripts/smoke-test.ps1 -Exe target/release/gamecheck.exe
       - name: Install without admin, smoke test, uninstall
         shell: pwsh
-        run: |
-          $installer = Get-ChildItem target/release/bundle/nsis/*-setup.exe | Select-Object -First 1
-          Write-Host "Installer: $($installer.Name) ($([math]::Round($installer.Length / 1MB, 1)) MB)"
-          $p = Start-Process $installer.FullName -ArgumentList "/S" -PassThru -Wait
-          if ($p.ExitCode -ne 0) { Write-Host "::error::Installer exit code $($p.ExitCode)"; exit 1 }
-          $dir = Join-Path $env:LOCALAPPDATA "GameCheck"
-          Get-ChildItem $dir | Format-Table Name, Length
-          $exe = Get-ChildItem $dir -Filter *.exe | Where-Object { $_.Name -notmatch "uninstall" } | Select-Object -First 1
-          if (-not $exe) { Write-Host "::error::Installed executable not found in $dir"; exit 1 }
-          ./scripts/smoke-test.ps1 -Exe $exe.FullName
-          if ($LASTEXITCODE -ne 0) { exit 1 }
-          $u = Start-Process (Join-Path $dir "uninstall.exe") -ArgumentList "/S" -PassThru -Wait
-          Start-Sleep -Seconds 5
-          if (Test-Path $exe.FullName) { Write-Host "::error::Uninstall left the executable behind"; exit 1 }
-          Write-Host "Install / uninstall without admin: passed"
+        run: ./scripts/install-test.ps1 -InstallerGlob "target/release/bundle/nsis/*-setup.exe"
       - name: Collect logs
         if: always()
         shell: pwsh
@@ -95,6 +81,7 @@ jobs:
           $logs = Join-Path $env:LOCALAPPDATA "com.gamecheck.desktop\logs"
           if (Test-Path $logs) { Get-ChildItem $logs | ForEach-Object { Write-Host "== $($_.Name)"; Get-Content $_.FullName -Tail 50 } }
       - uses: actions/upload-artifact@v4
+        if: always()
         with:
           name: GameCheck-windows-installer
           path: |
