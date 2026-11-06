@@ -1,0 +1,100 @@
+{
+  "app": {
+    "name": "GameCheck",
+    "tagline": "Will it run on your PC?",
+    "devBuild": "Development build"
+  },
+  "nav": {
+    "home": "Home",
+    "store": "Steam Store",
+    "library": "My Library",
+    "myPc": "My PC",
+    "compatibility": "Compatibility Checker",
+    "performance": "Performance",
+    "settings": "Settings",
+    "main": "Main navigation"
+  },
+  "common": {
+    "unavailable": "Unavailable",
+    "inDevelopment": "In development",
+    "plannedPhase": "Planned for phase {{phase}}",
+    "plannedFeatures": "What this section will do",
+    "notBuiltYet": "This section is not built yet. Nothing on this page is interactive until its phase is done.",
+    "loading": "Loading…",
+    "language": "Language",
+    "switchLanguage": "Switch language"
+  },
+  "home": {
+    "title": "Welcome to GameCheck",
+    "intro": "GameCheck reads your PC's real specs, finds the games installed on it and compares them with the requirements published on Steam.",
+    "sectionsTitle": "Sections",
+    "statusTitle": "Project status",
+    "statusBody": "This is an early development build. The app shell, navigation and languages work; the features listed in each section arrive phase by phase.",
+    "open": "Open {{section}}"
+  },
+  "pages": {
+    "store": {
+      "description": "Browse games and software from the Steam catalog, with images, prices, release dates and system requirements.",
+      "features": [
+        "Search the whole Steam catalog by name, also offline",
+        "Games and software, free and paid, with genres and categories",
+        "Prices, currency and discounts for your region, with the time they were fetched",
+        "Minimum and recommended requirements",
+        "Open the game's page on Steam"
+      ]
+    },
+    "library": {
+      "description": "Your games in one place: owned on Steam and installed from any launcher.",
+      "features": [
+        "Connect Steam securely through Steam's own sign-in page",
+        "Owned and not-owned games, respecting your Steam privacy settings",
+        "Installed games from Steam, Epic, GOG, Ubisoft, EA, Battle.net and Microsoft Store",
+        "Add a game manually or hide one from the list without touching its files"
+      ]
+    },
+    "myPc": {
+      "description": "Your hardware, read from Windows. Anything that cannot be read is shown as unavailable.",
+      "features": [
+        "Processor, cores and threads",
+        "Memory, graphics card and video memory",
+        "Windows version, 32/64-bit, DirectX feature level",
+        "Drives and free space, display resolution",
+        "Installed programs, kept separate from games"
+      ]
+    },
+    "compatibility": {
+      "description": "Compare a game's requirements with your PC, component by component.",
+      "features": [
+        "Processor, memory, graphics card, Windows, DirectX and storage",
+        "A clear verdict: excellent, good, limited, not suitable or unknown",
+        "The component that limits you the most"
+      ]
+    },
+    "performance": {
+      "description": "Real frame-rate measurements and settings suggestions. No invented FPS numbers.",
+      "features": [
+        "Measure FPS on your own PC (optional, using Intel PresentMon)",
+        "Resolution (720p, 1080p, 1440p) and quality presets (Low to Ultra)",
+        "Settings suggestions, marked as general guidance unless confirmed for the game"
+      ]
+    }
+  },
+  "settings": {
+    "title": "Settings",
+    "languageHint": "The interface switches between right-to-left and left-to-right automatically.",
+    "arabic": "العربية",
+    "english": "English",
+    "aboutTitle": "About",
+    "version": "Version",
+    "build": "Build",
+    "platform": "Platform",
+    "logFolder": "Log folder",
+    "notInApp": "Not running inside the GameCheck app",
+    "disclaimer": "GameCheck is not affiliated with Valve or Steam."
+  },
+  "error": {
+    "title": "Something went wrong",
+    "body": "The error was written to the log file. Reloading usually fixes it.",
+    "reload": "Reload"
+  }
+}

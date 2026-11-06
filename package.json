@@ -1,0 +1,11 @@
+{
+  "name": "gamecheck-workspace",
+  "private": true,
+  "packageManager": "pnpm@10.28.0",
+  "scripts": {
+    "dev": "pnpm --filter @gamecheck/desktop tauri dev",
+    "build": "pnpm --filter @gamecheck/desktop tauri build",
+    "test": "pnpm --filter @gamecheck/desktop test && cargo test --workspace",
+    "check": "pnpm --filter @gamecheck/desktop typecheck"
+  }
+}

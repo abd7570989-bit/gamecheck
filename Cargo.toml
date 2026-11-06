@@ -1,0 +1,23 @@
+[workspace]
+resolver = "2"
+members = ["apps/desktop/src-tauri", "crates/gc-core"]
+
+[workspace.package]
+version = "2.0.0-alpha.1"
+edition = "2021"
+license = "MIT"
+repository = "https://github.com/abd7570989-bit/gamecheck"
+
+[workspace.dependencies]
+serde = { version = "1", features = ["derive"] }
+serde_json = "1"
+thiserror = "2"
+log = "0.4"
+gc-core = { path = "crates/gc-core" }
+
+[profile.release]
+codegen-units = 1
+lto = true
+opt-level = "s"
+panic = "unwind"
+strip = true
