@@ -27,3 +27,4 @@ Write-Host ($report | ConvertTo-Json)
 if ($report.navItems -ne 7) { Write-Host "::error::Expected 7 navigation items, got $($report.navItems)"; exit 1 }
 if ($report.route -ne "/") { Write-Host "::error::Unexpected start route $($report.route)"; exit 1 }
 Write-Host "Smoke test passed"
+exit 0
