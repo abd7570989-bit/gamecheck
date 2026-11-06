@@ -1,3 +1,0 @@
-# GameCheck itself uses only the Python standard library. These are for testing and building.
-pytest==8.3.3
-pyinstaller==6.11.1

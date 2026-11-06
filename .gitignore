@@ -1,7 +1,12 @@
-__pycache__/
-*.pyc
-build/
-dist/
-.pytest_cache/
+# Rust
+target/
+# Node
 node_modules/
-GameCheck-source.zip
+dist/
+# Tauri
+apps/desktop/src-tauri/gen/
+# Local
+*.log
+.env
+.env.*
+!.env.example
