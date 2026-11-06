@@ -12,7 +12,12 @@
 | `cargo clippy -D warnings` و `cargo fmt --check` | Linux | ✅ نجح |
 | بناء Release حقيقي (`tauri build --no-bundle`) ثم تشغيله في وضع Smoke Test تحت Xvfb: النافذة فُتحت، الواجهة حُمّلت، الاتصال IPC مع Rust عمل، 7 أقسام، خروج بالرمز 0، وكُتب ملف السجل | Linux (WebKitGTK) | ✅ نجح |
 | صور الواجهة بالعربية (RTL) في Chromium — نفس محرك WebView2 — بدون أخطاء في الـ console | Linux | ✅ نجح |
-| البناء وSmoke Test والتثبيت بدون Administrator وإلغاء التثبيت | Windows (GitHub Actions) | ⏳ انظر نتيجة CI |
+| اختبارات الواجهة وRust على Windows | Windows (GitHub Actions، التشغيل 42216034470) | ✅ نجح |
+| بناء التطبيق ومثبّت NSIS (2.1 MB) | Windows (GitHub Actions) | ✅ نجح |
+| Smoke Test للبرنامج المبني: WebView2 حمّل الواجهة، IPC عمل، 7 أقسام | Windows (GitHub Actions) | ✅ نجح |
+| تثبيت صامت بدون Administrator في `%LOCALAPPDATA%\GameCheck`، ثم Smoke Test للنسخة المثبتة، ثم إلغاء التثبيت والتحقق من حذف الملفات ومفتاح السجل | Windows (GitHub Actions) | ✅ نجح |
 | تشغيل المثبّت على جهاز المستخدم | Windows (جهاز المستخدم) | ⏳ لم يُختبر بعد |
+
+ملاحظة عن CI: جهاز GitHub Actions ليس فيه كرت شاشة حقيقي، والواجهة لم تُفحص بالعين هناك؛ الفحص البصري على جهاز المستخدم.
 
 ملاحظة: داخل WebKitGTK على Linux لم تُلتقط لغة النظام العربية من متغير `LANG`، فظهرت الواجهة بالإنجليزية افتراضيًا. هذا خاص ببيئة التطوير؛ على Windows يأخذ WebView2 لغة واجهة Windows، وسيُتحقق منه على جهازك.
